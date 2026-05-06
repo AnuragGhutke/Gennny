@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { SideBar } from "../components/SideBar"
 import { GenImg } from "../ToolsPgs/GenImg"
 import { GenThumb } from "../ToolsPgs/GenThumb"
@@ -10,7 +10,6 @@ import { LogoName } from "../components/LogoName"
 export const Tools = () => {
 
     const { tool } = useParams<string>()
-    const navigate = useNavigate()
 
     const renderTool = () => {
         switch (tool) {
