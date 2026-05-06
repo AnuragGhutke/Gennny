@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+    --font-inter: 'Inter', sans-serif;
+}
+
+.move-gradient {
+    background: linear-gradient(270deg,
+            rgba(34, 0, 85, 0.95),
+            rgba(0, 0, 0, 0.85));
+    background-size: 400% 400%;
+    animation: moveGradient 4s ease infinite;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.color {
+    color: rgb(60, 0, 138),
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(132, 0, 255, 0.251);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(88, 10, 172, 0.361);
+}
+
+.btn-style {
+    width: 10rem;
+    background: rgba(77, 0, 136, 0.8);
+    padding: 0.5rem 0.75rem;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+}
+
+.btn-style:hover {
+    box-shadow: 0 0 80px rgba(59, 130, 246, 0.8);
+}
+
+.text-shadow-style {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.9);
+}
+
+.card-hover:hover {
+    box-shadow: 2px 2px 80px rgba(59, 130, 246, 0.8);
+}
+
+.footer-hover:hover {
+    color: rgb(160, 90, 247);
+    cursor: pointer;
+}
+
+::selection {
+    background: #6600ff;
+    color: white;
+}
+
+/* MAIN CARD ONLY (not inner elements) */
+.pricing-wrapper [class*="PricingTableCard"] {
+    background: #28006e60 !important;
+}
+
+.pricing-wrapper [class*="pricingTableCard"] {
+    background: linear-gradient(270deg, #210052a6 ,#29006ba6 )!important;
+}
+
+/* HEADINGS ONLY */
+.pricing-wrapper h1,
+.pricing-wrapper h2,
+.pricing-wrapper h3 {
+    color: white !important;
+}
+
+/* DESCRIPTION TEXT ONLY */
+.pricing-wrapper p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* BUTTONS ONLY */
+.pricing-wrapper button {
+    background: #260058 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+}
+
+/* REMOVE RANDOM BORDERS FROM INNER ELEMENTS */
+
+@media (min-width: 1024px) {
+  .pricing-wrapper {
+    width: 24rem;
+  }
+}
+.pricing-wrapper svg {
+    color: white !important;
+    fill: white !important;
+    stroke: white !important;
+}
+
+.cl-rootBox {
+    position: relative !important;
+    z-index: 100 !important;
+}
+
+/* shimmer animation when loading */
+.shimmer-sweep {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 60%
+  );
+  transform: rotate(25deg);
+  animation: shineMove 1.2s infinite;
+}
+
+@keyframes shineMove {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(25deg);
+  }
+}
