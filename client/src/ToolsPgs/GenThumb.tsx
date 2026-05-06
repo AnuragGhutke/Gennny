@@ -320,7 +320,7 @@ export const GenThumb = () => {
                                 Your thumbnail will appear here
                             </p>
 
-                            <span className="text-xs text-violet-500 mt-5">
+                            <span className="text-xs text-violet-500 mt-5 text-center">
                                 Preview generated using a lightweight model — results may vary in quality
 
                             </span>

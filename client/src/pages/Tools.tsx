@@ -31,7 +31,7 @@ export const Tools = () => {
 
             <SideBar />
 
-            <div className="lg:flex-1 p-10 mt-16 lg:mt-12">
+            <div className="lg:flex-1 p-5 lg:p-10 mt-16 lg:mt-12">
                 {renderTool()}
             </div>
         </div>
