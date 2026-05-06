@@ -14,7 +14,8 @@ const port: number = Number(process.env.PORT) || 3000
 
 //middlewares
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin:process.env.CLIENT_URL 
+    || "http://localhost:5173",
     credentials: true
 }))
 app.use(express.json())
